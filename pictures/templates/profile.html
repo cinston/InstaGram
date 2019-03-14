@@ -3,33 +3,26 @@
 {{ block.super}}
 {% load bootstrap4%}
 
-<br>
-<br>
-<br>
+
 <div class="container">
 
   <h1 id="profile_h">{{user.username}}</h1>
   <button id="button_h" type="button" class="btn btn-outline-secondary"><a href="/update">Edit Profile</a></button>
   <i id="fa_h" style="font-size:24px" class="fa fa-cog" aria-hidden="true"></i>
   <div id="block">
-    <p id="p_h"><strong>2</strong> posts</p>
-    <p id="p_hh"><strong>1</strong> Followers<strong>1</strong> Following</p>
+    <p id=""><strong>4</strong> posts</p>
+    <p id=""><strong>3</strong> Followers<strong>0</strong> Following</p>
 
     {% for prof in all_profile%}
-    <h4 id="p_hhh">{{prof.last_name}}</h4>
+    <h4 id="">{{prof.last_name}}</h4>
       {% endfor %}
-<br>
 
 
   </div>
 
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 <form method='POST' enctype="multipart/form-data">
   {% csrf_token %}
