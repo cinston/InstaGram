@@ -10,7 +10,7 @@ This is an instagram clone
 
 ## Link to live site
 
-COMING SOON
+https://cal-insta.herokuapp.com
 
 ## User Storieshttps://github.com/cinston/Gallery
  1. View different photos that interest me.
