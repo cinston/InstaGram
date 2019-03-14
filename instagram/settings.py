@@ -84,14 +84,6 @@ WSGI_APPLICATION = 'instagram.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'instagram',
-        'USER': 'carlos',
-    'PASSWORD':'zagadat',
-    }
-}
 
 if config('MODE')=="dev":
 	DATABASES = {
@@ -163,4 +155,3 @@ STATICFILES_DIRS = (
 )
 LOGIN_REDIRECT_URL='homePage'
 # django_heroku.settings(locals())
-LOGIN_REDIRECT_URL='homePage'
