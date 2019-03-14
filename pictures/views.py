@@ -48,14 +48,21 @@ def profile_index(request):
     else:
         form =UploadForm()
 
-
-    images = Image.objects.all()
-
-    # all_profile = Profile.objects.all()
-    # profile = Profile.objects.get(user_id = request.user)
-    #
-    # if request.method == 'POST':
-    #     form=ProfileForm(request.POST,request.FILES,instance=profile)
-    #     if form.is_valid():
-    #         form.save()
+        images = Image.objects.all()
+        all_profile = Profile.objects.all()
     return render(request,'profile.html', locals())
+
+
+def update_index(request):
+    # all_profile = Profile.objects.all()
+    profile = Profile.objects.get(user_id = request.user)
+    if request.method == 'POST':
+        form = UploadForm(request.POST,request.FILES)
+
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+    else:
+        form  = ProfileForm()
+
+    return render(request,'update.html', locals())
