@@ -22,7 +22,7 @@
           <p class="card-text">{{image.image_description}}</p>
         </div>
         <div class="card-footer text-muted">
-          <form method='post' action='{% url 'comment'%}'>
+          <form method='post' action="{% url 'comment' %}">
             {% csrf_token %}
             {{ forms }}
             <input type="hidden"  name="image_id" value="{{image.id}}">
